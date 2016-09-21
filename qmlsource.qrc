@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/Main">
+        <file>Jurnal.qml</file>
+        <file>AllTask.qml</file>
+        <file>Calendar.qml</file>
+    </qresource>
+</RCC>
