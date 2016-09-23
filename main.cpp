@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 
     QObject::connect(timer,SIGNAL(Tmp1(int)),mainController,SLOT(Show(int)));
 
-    QThreadPool *threadPool = QThreadPool::globalInstance();
+    //QThreadPool *threadPool = QThreadPool::globalInstance();
     //threadPool->start(timer);
 
     mainController->Show(1);
