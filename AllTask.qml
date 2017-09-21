@@ -43,8 +43,12 @@ Rectangle {
         Text {
             id: name
             text: qsTr("male")
+
         }
 
+        TextEdit {
+
+        }
 
     }
 }

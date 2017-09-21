@@ -1,23 +1,24 @@
 #ifndef JURNAL_H
 #define JURNAL_H
 
-#include <QQuickItem>
-#include <QQuickView>
+#include <QuickItems/quickitembase.h>
+#include <QQmlContext>
 
-class Jurnal : public QQuickItem
+class Jurnal : public QuickItemBase
 {
 private:
-    QQuickView *_parent;
+    QuickViewBase *_parent;
 
     Q_OBJECT
 public:
-    explicit Jurnal(QQuickView *parent);
+    explicit Jurnal(QuickViewBase *parent): QuickItemBase(parent, QUrl("qrc:/Main/Jurnal.qml")){}
 
 signals:
     void Tmp1(int value);
 
 public slots:
-    void Show();
+    void show();
+    void cppCalendar();
 
 };
 

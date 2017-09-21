@@ -2,21 +2,20 @@
 
 MainController::MainController()
 {
-
+    _quickItemBases[0] = new AllTask(this);
+    _quickItemBases[1] = new Jurnal(this);
+    _quickItemBases[2] = new Calendar(this);
 }
 
-void MainController::Show(int value)
+void MainController::nextItem(int value)
 {
-    switch(value)
-    {
-        case 1:
-            allTask = new AllTask(this);
-            allTask->Show();
-            break;
-        default:
-            jurnal = new Jurnal(this);
-            jurnal->Show();
-            break;
+    QThread* thread = new QThread();
+
+    if(value > (int)sizeof(_quickItemBases)) {
+        value = 0;
     }
+
+    connect(thread, SIGNAL(started()), _quickItemBases[value], SLOT(show()));
+    thread->start();
 }
 

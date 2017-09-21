@@ -74,7 +74,6 @@ Rectangle {
             }
         }
 
-
         ListView {
                 width: 180;
                 height: 200
@@ -82,5 +81,19 @@ Rectangle {
 
                 delegate: Text { text: name; font.pixelSize: 18 }
         }
+
+        Row {
+            Button {
+                id: button
+                text: qsTr("click")
+
+
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: _this.allTaskShow()
+                }
+            }
+        }
+
    }
 }

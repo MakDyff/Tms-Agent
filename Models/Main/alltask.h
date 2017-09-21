@@ -1,29 +1,19 @@
 #ifndef ALLTASK_H
 #define ALLTASK_H
 
-#include <QQuickItem>
-#include <QQuickView>
 #include <QQmlContext>
+#include <QuickItems/quickitembase.h>
 
-#include "Share/timer.h"
-#include <QThreadPool>
-
-class AllTask : public QQuickItem
+class AllTask : public QuickItemBase
 {
-private:
-    QQuickView *_parent;
-
     Q_OBJECT
-public:
-    explicit AllTask(QQuickView *parent);
 
-signals:
-    void Tmp1(int value);
+public:
+    AllTask(QuickViewBase *parent): QuickItemBase(parent, QUrl("qrc:/Main/AllTask.qml")){}
 
 public slots:
-    void Show();
+    void show();
     void cppSlot();
-    void tmp2();
 
 };
 

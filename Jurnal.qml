@@ -35,7 +35,7 @@ Rectangle {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: allTask.cppSlot()
+                onClicked: jurnal.cppCalendar()
             }
         }
 

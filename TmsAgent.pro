@@ -1,8 +1,4 @@
 # Add more folders to ship with the application, here
-folder_01.source = qml/TmsAgent
-folder_01.target = qml
-DEPLOYMENTFOLDERS = folder_01
-
 QT += qml quick
 QT += widgets
 
@@ -14,7 +10,10 @@ SOURCES += main.cpp \
     Controllers/maincontroller.cpp \
     Models/Main/alltask.cpp \
     Models/Main/jurnal.cpp \
-    Share/timer.cpp
+    Share/timer.cpp \
+    QuickItems/quickitembase.cpp \
+    Controllers/quickviewbase.cpp \
+    Models/Main/calendar.cpp
 
 # Installation path
 # target.path =
@@ -27,7 +26,10 @@ HEADERS += \
     Controllers/maincontroller.h \
     Models/Main/alltask.h \
     Models/Main/jurnal.h \
-    Share/timer.h
+    Share/timer.h \
+    QuickItems/quickitembase.h \
+    Controllers/quickviewbase.h \
+    Models/Main/calendar.h
 
 OTHER_FILES +=
 

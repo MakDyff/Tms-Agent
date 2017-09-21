@@ -5,21 +5,22 @@
 #include <QThread>
 #include "Models/Main/alltask.h"
 #include "Models/Main/jurnal.h"
+#include "Models/Main/calendar.h"
+#include "quickviewbase.h"
 
-class MainController : public QQuickView
+class MainController : public QuickViewBase
 {
 private:
-    AllTask *allTask;
-    Jurnal *jurnal;
+    QuickItemBase* _quickItemBases[3];
 
     Q_OBJECT
 public:
-    explicit MainController();
+    MainController();
 
 signals:
 
 public slots:
-    void Show(int value = 0);
+    void nextItem(int value = 0);
 };
 
 #endif // MAINCONTROLLER_H

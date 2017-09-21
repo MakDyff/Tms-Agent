@@ -1,13 +1,12 @@
 #include "jurnal.h"
 
-Jurnal::Jurnal(QQuickView *parent)
+void Jurnal::show()
 {
-    _parent = parent;
+    parent->rootContext()->setContextProperty("jurnal", this);
+    showBase();
 }
 
-void Jurnal::Show()
+void Jurnal::cppCalendar()
 {
-    //_parent->setSource(QUrl(QStringLiteral("qrc:/Main/Calendar.qml")));
-    _parent->setSource(QUrl(QStringLiteral("qrc:/Main/Jurnal.qml")));
-    _parent->show();
+    parent->nextItem(2);
 }
