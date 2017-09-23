@@ -16,26 +16,6 @@ Rectangle {
 
     }
 
-
-    ListModel {
-            id: animalsModel
-            ListElement { name: "Ant"; size: "Tiny" }
-            ListElement { name: "Flea"; size: "Tiny" }
-            ListElement { name: "Parrot"; size: "Small" }
-            ListElement { name: "Guinea pig"; size: "Small" }
-            ListElement { name: "Rat"; size: "Small" }
-            ListElement { name: "Butterfly"; size: "Small" }
-            ListElement { name: "Dog"; size: "Medium" }
-            ListElement { name: "Cat"; size: "Medium" }
-            ListElement { name: "Pony"; size: "Medium" }
-            ListElement { name: "Koala"; size: "Medium" }
-            ListElement { name: "Horse"; size: "Large" }
-            ListElement { name: "Tiger"; size: "Large" }
-            ListElement { name: "Giraffe"; size: "Large" }
-            ListElement { name: "Elephant"; size: "Huge" }
-            ListElement { name: "Whale"; size: "Huge" }
-        }
-
     Column {
 
         anchors.horizontalCenter: parent.horizontalCenter
@@ -77,9 +57,9 @@ Rectangle {
         ListView {
                 width: 180;
                 height: 200
-                model: animalsModel
+                model: _this.list
 
-                delegate: Text { text: name; font.pixelSize: 18 }
+                delegate: Text { text: modelData; font.pixelSize: 18 }
         }
 
         Row {
