@@ -3,6 +3,7 @@
 
 #include <QuickItems/quickitembase.h>
 #include <QQmlContext>
+#include "iostream"
 
 class Calendar : public QuickItemBase
 {
@@ -25,6 +26,7 @@ signals:
 public slots:
     void show();
     void allTaskShow();
+    void addTask();
 };
 
 #endif // CALENDAR_H

@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 //    mainController->Show(1);
 
     MainController m;
-    m.nextItem(0);
+    m.nextItem(2);
 
     return app.exec();
 }

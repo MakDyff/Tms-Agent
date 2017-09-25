@@ -65,7 +65,19 @@ Rectangle {
         Row {
             Button {
                 id: button
-                text: qsTr("click")
+                text: qsTr("Add Task")
+
+
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: _this.addTask()
+                }
+            }
+        }
+
+        Row {
+            Button {
+                text: qsTr("Return")
 
 
                 MouseArea {
@@ -74,6 +86,5 @@ Rectangle {
                 }
             }
         }
-
    }
 }
